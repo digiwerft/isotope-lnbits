@@ -19,8 +19,7 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(IsotopeLNbits::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
+            BundleConfig::create(IsotopeLNbits::class)->setLoadAfter([ContaoCoreBundle::class, 'isotope'])
         ];
     }
 
