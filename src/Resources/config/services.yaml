@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    Digiwerft\IsotopeLNbits\Controller\LNbitsCheckPayment:
+        public: true
+        arguments:
+            - "@contao.framework"
+            - "@request_stack"
+        tags:
+            - controller.service_arguments

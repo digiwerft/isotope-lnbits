@@ -1,0 +1,24 @@
+<?php
+
+?>
+
+<div class="iso_payment_lnbits">
+    <data id="paymentId" value="<?= $this->paymentId ?>" />
+    <data id="paymentHash" value="<?= $this->paymentHash ?>" />
+    <data id="successUrl" value="<?= $this->successUrl ?>" />
+    <h2><?= $this->headline ?></h2>
+    <?php if ($this->message): ?>
+    <p><?= $this->message ?></p>
+    <?php else : ?>
+    <p><?= $this->orderId ?></p>
+    <?php endif; ?>
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <img src="<?= $this->qr ?>" alt="QR Code of Lightning Invoice">
+            </div>
+            <div class="flip-box-back">
+            </div>
+        </div>
+    </div>
+</div>

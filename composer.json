@@ -1,0 +1,43 @@
+{
+    "name": "digiwerft/isotope-lnbits",
+    "type": "contao-bundle",
+    "license": "MIT",
+    "description": "Adds Lightning Payment Method with LNbits to Isotope",
+    "authors": [
+        {
+            "name": "DIGIWERFT GmbH",
+            "email": "github@digi-werft.de",
+            "homepage": "https://www.digiwerft.de"
+        }
+    ],
+    "keywords": [
+        "contao",
+        "bitcoin",
+        "lightning",
+        "isotope",
+        "lnbits",
+        "lnpay",
+        "payment",
+        "sound money"
+    ],
+    "require": {
+        "php": "^8.2",
+        "contao/core-bundle": "^4.13 || ^5.3"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Digiwerft\\IsotopeLNbits\\": "src/",
+            "Contao\\": "src/Models/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Digiwerft\\IsotopeLNbits\\ContaoManager\\Plugin"
+    }
+}
