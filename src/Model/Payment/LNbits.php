@@ -31,7 +31,7 @@ class LNbits extends Payment
         $GLOBALS['TL_CSS']['iso_lnbits'] = 'bundles/isotopelnbits/iso_payment_lnbits.css';
         $successUrl = Checkout::generateUrlForStep(Checkout::STEP_COMPLETE, $objOrder);
         $api = new LNbitsApi($this->lnbits_api_url, $this->lnbits_api_key);
-        $invoice = $api->createInvoice($objOrder->getTotal(), "Order: " . $objOrder->getUniqueId());
+        $invoice = $api->createInvoice($objOrder->getTotal(), "Order: " . $objOrder->getUniqueId(), $objOrder->getCurrency());
         if (!$invoice) {
             Checkout::redirectToStep(Checkout::STEP_FAILED);
         }

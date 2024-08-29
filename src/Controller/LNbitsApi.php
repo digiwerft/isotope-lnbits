@@ -22,14 +22,14 @@ class LNbitsApi
         ]);
     }
 
-    public function createInvoice($amount, $description)
+    public function createInvoice($amount, $description, $unit = 'EUR')
     {
         $endpoint = $this->apiUrl . '/api/v1/payments';
         $data = [
             'out' => false,
             'amount' => $amount,
             'memo' => $description,
-            'unit' => 'EUR'
+            'unit' => $unit
         ];
 
         try {
