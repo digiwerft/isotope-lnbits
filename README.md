@@ -1,6 +1,6 @@
 # Contao IsotopeLNbits Bundle
 
-
+With this extension you can accept Bitcoin payments over the Lightning Network with LNbits. You need a working LNbits Server to use this extension. If you don't have one, try opago-pay.com.
 
 ## Getting started
 
@@ -17,4 +17,4 @@ composer require digiwerft/isotope-lnbits
 ## Important note
 
 You need an LNbits Server to use this extension.
-If you dont have one, try opago-pay.com.
+If you don't have one, try opago-pay.com.
