@@ -8,7 +8,7 @@ use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Digiwerft\IsotopeLNbits\IsotopeLNbitsBundle;
+use Digiwerft\IsotopeLNbits\IsotopeLNbits;
 use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -19,7 +19,7 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(IsotopeLNbitsBundle::class)
+            BundleConfig::create(IsotopeLNbits::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
