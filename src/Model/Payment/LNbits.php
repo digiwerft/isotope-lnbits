@@ -47,6 +47,7 @@ class LNbits extends Payment
         $template->successUrl = $successUrl;
         $template->paymentHash = $invoice['payment_hash'];
         $template->paymentId = $this->id;
+        $template->lnurl = $invoice['payment_request'];
 
         return $template->parse();
     }

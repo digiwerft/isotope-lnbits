@@ -40,6 +40,17 @@
   background-color: #fff;
   transform: rotateY(180deg);
 }
+.iso_payment_lnbits .flip-box .flip-box-inner #lnbitsCopyInvoiceButton {
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  border: 1px solid lightgrey;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
 .iso_payment_lnbits .flip-box.paid .flip-box-inner {
   transform: rotateY(180deg);
 }

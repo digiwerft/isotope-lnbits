@@ -43,6 +43,22 @@
                 background-color: #fff;
                 transform: rotateY(180deg);
             }
+
+            #lnbitsCopyInvoiceButton {
+                display: block;
+
+                margin: {
+                    top: 2rem;
+                    left: auto;
+                    right: auto;
+                    bottom: 2rem;
+                }
+
+                border: 1px solid lightgrey;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
         }
 
         &.paid {

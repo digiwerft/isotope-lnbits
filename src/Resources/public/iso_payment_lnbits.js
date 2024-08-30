@@ -13,6 +13,13 @@ let paymentId = document.getElementById('paymentId').value;
 let paymentHash = document.getElementById('paymentHash').value;
 let successUrl = document.getElementById('successUrl').value;
 let qrHolder = document.querySelectorAll('.flip-box')[0];
+let copyButton = document.getElementById('lnbitsCopyInvoiceButton');
+let invoice = document.getElementById('invoiceLink').getAttribute(['data-invoice']);
+
+copyButton.addEventListener('click', function () {
+    navigator.clipboard.writeText(invoice);
+});
+
 
 function sendRequest() {
     ajaxRequest('/lnbits-check-payment?id=' + paymentId + '&hash=' + paymentHash, function (response) {

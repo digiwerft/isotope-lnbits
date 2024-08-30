@@ -15,7 +15,11 @@
     <div class="flip-box">
         <div class="flip-box-inner">
             <div class="flip-box-front">
-                <img src="<?= $this->qr ?>" alt="QR Code of Lightning Invoice">
+                <a href="lightning:<?= $this->lnurl ?>" title="Open in Lightning Wallet"
+                    data-invoice="<?= $this->lnurl ?>" id="invoiceLink">
+                    <img src="<?= $this->qr ?>" alt="QR Code of Lightning Invoice">
+                </a>
+                <span class="lnbitsCopyInvoiceButton">Copy</span>
             </div>
             <div class="flip-box-back">
             </div>
