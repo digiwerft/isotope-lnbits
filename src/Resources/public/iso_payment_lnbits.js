@@ -17,14 +17,13 @@ let qrHolder = document.querySelectorAll('.flip-box')[0];
 function sendRequest() {
     ajaxRequest('/lnbits-check-payment?id=' + paymentId + '&hash=' + paymentHash, function (response) {
         paid = JSON.parse(response);
-        console.log(paid.paid);
         if (paid.paid === true) {
             qrHolder.classList.add('paid');
             window.setTimeout(function () {
                 window.location.href = successUrl;
             }, 500);
         } else {
-            window.setTimeout(sendRequest, 200);
+            window.setTimeout(sendRequest, 400);
         }
     });
 }
